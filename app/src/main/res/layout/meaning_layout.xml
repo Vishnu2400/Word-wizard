@@ -3,9 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/yellow"
     app:cardElevation="8dp"
     app:cardCornerRadius="8dp"
-    app:cardBackgroundColor="@color/yellow"
     android:layout_marginTop="8dp">
 
     <LinearLayout
@@ -14,19 +14,19 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/textView_partsOfSpeech"
+            android:id="@+id/textView_wordPartsOfSpeech"
             android:text="Exclamatory"
+            android:textSize="15sp"
+            android:padding="7dp"
+            android:textStyle="bold"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="18sp"
-            android:padding="8dp"
-            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_definitions"
+            android:id="@+id/recycler_WordDefinitions"
             android:layout_margin="8dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

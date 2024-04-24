@@ -6,9 +6,9 @@ public class DictionaryAPIResponse {
 
     String word = "";
 
-    List<wordPhonetics> wordPhonetic = null;
+    List<wordPhonetics> phonetics = null;
 
-    List<wordMeanings> wordmeanings = null;
+    List<wordMeanings> meanings = null;
 
 
     public String getWord() {
@@ -20,18 +20,33 @@ public class DictionaryAPIResponse {
     }
 
     public List<wordPhonetics> getWordPhonetic() {
-        return wordPhonetic;
+
+        return phonetics;
     }
 
-    public void setWordPhonetic(List<wordPhonetics> wordPhonetic) {
-        this.wordPhonetic = wordPhonetic;
+    public void setWordPhonetic(List<wordPhonetics> phonetics) {
+        this.phonetics = phonetics;
     }
 
     public List<wordMeanings> getWordmeanings() {
-        return wordmeanings;
+
+        return meanings;
     }
 
-    public void setWordmeanings(List<wordMeanings> wordmeanings) {
-        this.wordmeanings = wordmeanings;
+    public void setWordmeanings(List<wordMeanings> meanings) {
+        this.meanings = meanings;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Word: ").append(word).append("\n");
+        if (meanings != null) {
+            sb.append("Meanings:\n");
+            for (wordMeanings meaning : meanings) {
+                sb.append(meaning.toString()).append("\n");
+            }
+        }
+        return sb.toString();
     }
 }

@@ -32,7 +32,7 @@
                 android:textSize="36sp"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:textColor="@color/lavender"/>
+                android:textColor="@color/turquoise"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -91,7 +91,7 @@
                 android:id="@+id/signup_button"
                 android:textSize="18sp"
                 android:layout_marginTop="30dp"
-                android:backgroundTint="@color/lavender"
+                android:backgroundTint="@color/turquoise"
                 app:cornerRadius = "20dp"/>
 
             <TextView
@@ -102,7 +102,7 @@
                 android:layout_gravity="center"
                 android:padding="8dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/lavender"
+                android:textColor="@color/turquoise"
                 android:textSize="18sp"/>
 
         </LinearLayout>

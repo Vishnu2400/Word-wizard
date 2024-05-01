@@ -1,6 +1,7 @@
 package com.example.itmd_555_finalproject.CustomAdapters;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -40,6 +41,8 @@ public class wordDefinationAdapter extends RecyclerView.Adapter<wordDefinationVi
 
         synonyms.append(wordDefinitionsList.get(position).getSynonyms());
         antonyms.append(wordDefinitionsList.get(position).getAntonyms());
+
+        Log.d("definations",wordDefinitionsList.toArray().toString());
 
         holder.textView_wordSynonyms.setText(synonyms);
         holder.textView_wordAntonyms.setText(antonyms);

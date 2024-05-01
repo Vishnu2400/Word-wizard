@@ -5,7 +5,10 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.itmd_555_finalproject.DictionaryModels.DictionaryAPIResponse;
+import com.example.itmd_555_finalproject.DictionaryModels.wordDefinations;
+import com.example.itmd_555_finalproject.DictionaryModels.wordMeanings;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -46,20 +49,56 @@ public class RequestManager {
                         return;
                     }
 
-
                     List<DictionaryAPIResponse> meanings = response.body();
                     if (meanings != null && meanings.size() > 0) {
                         DictionaryAPIResponse wordMeanings = meanings.get(0);
                         Log.d("RequestManager", "Meaning: " + wordMeanings.toString());
-                        // Here you can print other information from the response if needed
+
+                        // Retrieve word meanings
+                        List<wordMeanings> wordMeaningsList = getMeaningsByPartOfSpeech(wordMeanings, "adjective");
+                        if (wordMeaningsList != null && !wordMeaningsList.isEmpty()) {
+                            for (wordMeanings Posmeanings : wordMeaningsList) {
+                                String partOfSpeech = Posmeanings.getPartOfSpeech();
+                                Log.d("Part of Speech", partOfSpeech);
+
+                                // Retrieve definitions for each part of speech
+                                List<wordDefinations> definitions = Posmeanings.getDefinitions();
+                                if (definitions != null && !definitions.isEmpty()) {
+                                    for (wordDefinations definition : definitions) {
+                                        List<String> synonyms = definition.getSynonyms();
+                                        List<String> antonyms = definition.getAntonyms();
+
+                                        // Now you can use synonyms and antonyms lists
+                                        Log.d("Synonyms", synonyms.toString());
+                                        Log.d("Antonyms", antonyms.toString());
+                                    }
+                                }
+                            }
+                        } else {
+                            Log.e("RequestManager", "No word meanings found");
+                            Toast.makeText(context, "No word meanings found", Toast.LENGTH_SHORT).show();
+                        }
                     } else {
                         Log.e("RequestManager", "No meaning found");
                         Toast.makeText(context, "No meaning found", Toast.LENGTH_SHORT).show();
                     }
 
                     listener.onFetchData(response.body().get(0), response.message());
-
                 }
+
+
+                private List<wordMeanings> getMeaningsByPartOfSpeech(DictionaryAPIResponse response, String partOfSpeech) {
+                    List<wordMeanings> meanings = new ArrayList<>();
+                    if (response != null && response.getWordmeanings() != null) {
+                        for (wordMeanings meaning : response.getWordmeanings()) {
+                            if (meaning.getPartOfSpeech().equalsIgnoreCase(partOfSpeech)) {
+                                meanings.add(meaning);
+                            }
+                        }
+                    }
+                    return meanings;
+                }
+
 
                 @Override
                 public void onFailure(Call<List<DictionaryAPIResponse>> call, Throwable t) {

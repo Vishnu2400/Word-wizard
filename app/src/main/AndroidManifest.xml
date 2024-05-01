@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ProfileAuthentication.profileActivity"
+            android:name=".ProfileAuthentication.ProfileActivity"
             android:exported="true">
         </activity>
         <activity

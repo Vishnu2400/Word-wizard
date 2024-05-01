@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/profilebkg"
-    tools:context=".ProfileAuthentication.profileActivity">
+    tools:context=".ProfileAuthentication.ProfileActivity">
 
     <ImageView
         android:layout_width="100dp"
@@ -77,7 +77,7 @@
                     android:text="27"
                     android:gravity="center"
                     android:textAlignment="center"
-                    android:textColor="@color/lavender"
+                    android:textColor="@color/turquoise"
                     android:textSize="26sp"
                     android:textStyle="bold"/>
 
@@ -87,7 +87,7 @@
                     android:id="@+id/posts"
                     android:text="Posts"
                     android:textAlignment="center"
-                    android:textColor="@color/lavender"
+                    android:textColor="@color/turquoise"
                     android:textSize="16sp"/>
 
             </LinearLayout>
@@ -108,7 +108,7 @@
                     android:text="455"
                     android:gravity="center"
                     android:textAlignment="center"
-                    android:textColor="@color/lavender"
+                    android:textColor="@color/turquoise"
                     android:textSize="26sp"
                     android:textStyle="bold"/>
 
@@ -118,7 +118,7 @@
                     android:id="@+id/followers"
                     android:text="Followers"
                     android:textAlignment="center"
-                    android:textColor="@color/lavender"
+                    android:textColor="@color/turquoise"
                     android:textSize="16sp"/>
 
             </LinearLayout>
@@ -139,7 +139,7 @@
                     android:text="413"
                     android:gravity="center"
                     android:textAlignment="center"
-                    android:textColor="@color/lavender"
+                    android:textColor="@color/turquoise"
                     android:textSize="26sp"
                     android:textStyle="bold"/>
 
@@ -149,7 +149,7 @@
                     android:id="@+id/following"
                     android:text="Following"
                     android:textAlignment="center"
-                    android:textColor="@color/lavender"
+                    android:textColor="@color/turquoise"
                     android:textSize="16sp"/>
 
             </LinearLayout>
@@ -173,7 +173,7 @@
                 android:layout_weight="1"
                 android:text="Name"
                 android:textStyle="bold"
-                android:textColor="@color/lavender"
+                android:textColor="@color/turquoise"
                 android:textSize="18sp"/>
 
             <TextView
@@ -193,7 +193,7 @@
             android:layout_height="1dp"
             android:layout_margin="10dp"
             android:alpha="0.5"
-            android:background="@color/lavender"/>
+            android:background="@color/turquoise"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -209,7 +209,7 @@
                 android:layout_weight="1"
                 android:text="Email"
                 android:textStyle="bold"
-                android:textColor="@color/lavender"
+                android:textColor="@color/turquoise"
                 android:textSize="18sp"/>
 
             <TextView
@@ -229,7 +229,7 @@
             android:layout_height="1dp"
             android:layout_margin="10dp"
             android:alpha="0.5"
-            android:background="@color/lavender"/>
+            android:background="@color/turquoise"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -245,7 +245,7 @@
                 android:layout_weight="1"
                 android:text="Username"
                 android:textStyle="bold"
-                android:textColor="@color/lavender"
+                android:textColor="@color/turquoise"
                 android:textSize="18sp"/>
 
             <TextView
@@ -265,7 +265,7 @@
             android:layout_height="1dp"
             android:layout_margin="10dp"
             android:alpha="0.5"
-            android:background="@color/lavender"/>
+            android:background="@color/turquoise"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -281,7 +281,7 @@
                 android:layout_weight="1"
                 android:text="Password"
                 android:textStyle="bold"
-                android:textColor="@color/lavender"
+                android:textColor="@color/turquoise"
                 android:textSize="18sp"/>
 
             <TextView

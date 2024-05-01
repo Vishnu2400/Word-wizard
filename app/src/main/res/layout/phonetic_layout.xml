@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="8dp"
-    app:cardCornerRadius="8dp"
     android:layout_margin="4dp"
-    app:cardBackgroundColor="@color/yellow">
+    app:cardBackgroundColor="@color/yellow"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
 
     <LinearLayout
-        android:layout_margin="4dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp">
+
         <TextView
             android:id="@+id/textView_phoneticWord"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="ha-lo"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="18sp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:textSize="18sp" />
 
         <ImageButton
             android:id="@+id/image_audioButton"
-            android:contentDescription="play audio"
             android:layout_width="0dp"
             android:layout_height="48dp"
-            android:padding="8dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
+            android:contentDescription="play audio"
+            android:padding="8dp"
             android:src="@drawable/ic_word_audio" />
     </LinearLayout>
 

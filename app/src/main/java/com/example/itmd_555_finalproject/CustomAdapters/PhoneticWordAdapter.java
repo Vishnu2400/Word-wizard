@@ -2,6 +2,7 @@ package com.example.itmd_555_finalproject.CustomAdapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.view.LayoutInflater;
@@ -45,10 +46,18 @@ public class PhoneticWordAdapter extends RecyclerView.Adapter<PhoneticWordViewHo
             public void onClick(View view) {
                 MediaPlayer player = new MediaPlayer();
                 try {
-                    player.setAudioStreamType(AudioManager.STREAM_MUSIC);
+                    player.setAudioAttributes(new AudioAttributes.Builder()
+                            .setUsage(AudioAttributes.USAGE_MEDIA)
+                            .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                            .build());
                     player.setDataSource(phoneticsList.get(position).getAudio());
-                    player.prepare();
-                    player.start();
+                    player.prepareAsync();
+                    player.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                        @Override
+                        public void onPrepared(MediaPlayer mediaPlayer) {
+                            mediaPlayer.start();
+                        }
+                    });
                     player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                         @Override
                         public void onCompletion(MediaPlayer mediaPlayer) {
@@ -57,8 +66,7 @@ public class PhoneticWordAdapter extends RecyclerView.Adapter<PhoneticWordViewHo
                     });
                 } catch (Exception e) {
                     e.printStackTrace();
-                    Toast.makeText(context, "Couldn't play audio!", Toast.LENGTH_SHORT).show();
-                    player.release(); // Release MediaPlayer in case of an exception
+                    Toast.makeText(context, "Couldn't play audio: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
         });

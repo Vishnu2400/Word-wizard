@@ -35,17 +35,7 @@ public class wordDefinationAdapter extends RecyclerView.Adapter<wordDefinationVi
     public void onBindViewHolder(@NonNull wordDefinationViewHolder holder, int position) {
         holder.textView_wordDefinition.setText("Defination :"+wordDefinitionsList.get(position).getDefinition());
         holder.textView_wordExample.setText("Example word:"+wordDefinitionsList.get(position).getExample());
-        StringBuilder synonyms = new StringBuilder();
-        StringBuilder antonyms = new StringBuilder();
 
-        synonyms.append(wordDefinitionsList.get(position).getSynonyms());
-        antonyms.append(wordDefinitionsList.get(position).getAntonyms());
-
-        holder.textView_wordSynonyms.setText(synonyms);
-        holder.textView_wordAntonyms.setText(antonyms);
-
-        holder.textView_wordSynonyms.setSelected(true);
-        holder.textView_wordAntonyms.setSelected(true);
     }
 
     @Override

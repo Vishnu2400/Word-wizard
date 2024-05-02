@@ -4,14 +4,17 @@ import java.util.List;
 
 public class DictionaryAPIResponse {
 
-    String word = "";
+    static String word = "";
 
     List<wordPhonetics> phonetics = null;
 
     List<wordMeanings> meanings = null;
 
+    private List<String> synonyms = null;
+    private List<String> antonyms = null;
 
-    public String getWord() {
+
+    public static String getWord() {
         return word;
     }
 
@@ -25,6 +28,7 @@ public class DictionaryAPIResponse {
     }
 
     public void setWordPhonetic(List<wordPhonetics> phonetics) {
+
         this.phonetics = phonetics;
     }
 
@@ -34,6 +38,7 @@ public class DictionaryAPIResponse {
     }
 
     public void setWordmeanings(List<wordMeanings> meanings) {
+
         this.meanings = meanings;
     }
 

@@ -10,7 +10,7 @@ import com.example.itmd_555_finalproject.R;
 
 public class wordDefinationViewHolder extends RecyclerView.ViewHolder {
 
-    public TextView  textView_wordExample, textView_wordDefinition, textView_wordSynonyms, textView_wordAntonyms;
+    public TextView  textView_wordExample, textView_wordDefinition;
 
 
     public wordDefinationViewHolder(@NonNull View itemView) {
@@ -18,8 +18,6 @@ public class wordDefinationViewHolder extends RecyclerView.ViewHolder {
 
         textView_wordDefinition = itemView.findViewById(R.id.textView_wordDefinition);
         textView_wordExample = itemView.findViewById(R.id.textView_wordExample);
-        textView_wordAntonyms = itemView.findViewById(R.id.textView_wordAntonyms);
-        textView_wordSynonyms = itemView.findViewById(R.id.textView_wordSynonyms);
 
     }
 }

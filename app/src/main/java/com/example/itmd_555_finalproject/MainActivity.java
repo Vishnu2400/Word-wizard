@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.itmd_555_finalproject.CustomAdapters.PhoneticWordAdapter;
 import com.example.itmd_555_finalproject.CustomAdapters.wordMeaningAdapter;
 import com.example.itmd_555_finalproject.DictionaryModels.DictionaryAPIResponse;
+import com.example.itmd_555_finalproject.ProfileAuthentication.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 

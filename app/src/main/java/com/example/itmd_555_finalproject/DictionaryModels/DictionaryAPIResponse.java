@@ -4,7 +4,7 @@ import java.util.List;
 
 public class DictionaryAPIResponse {
 
-    static String word = "";
+    String word = "";
 
     List<wordPhonetics> phonetics = null;
 
@@ -14,7 +14,7 @@ public class DictionaryAPIResponse {
     private List<String> antonyms = null;
 
 
-    public static String getWord() {
+    public  String getWord() {
         return word;
     }
 

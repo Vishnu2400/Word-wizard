@@ -6,7 +6,7 @@
     app:cardElevation="8dp"
     app:cardCornerRadius="8dp"
     android:layout_margin="4dp"
-    app:cardBackgroundColor="@color/yellow">
+    app:cardBackgroundColor="@color/green">
 
     <LinearLayout
         android:layout_margin="4dp"
@@ -16,7 +16,7 @@
             android:id="@+id/textView_phoneticWord"
             android:text="ha-lo"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
             android:padding="8dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_word_audio" />
+            android:src="@drawable/baseline_volume_up_24" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

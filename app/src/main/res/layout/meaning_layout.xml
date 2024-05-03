@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardBackgroundColor="@color/yellow"
+    app:cardBackgroundColor="@color/green"
     app:cardElevation="8dp"
     app:cardCornerRadius="8dp"
     android:layout_marginTop="8dp">
@@ -20,7 +20,7 @@
             android:padding="7dp"
             android:textStyle="bold"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <androidx.recyclerview.widget.RecyclerView
@@ -36,14 +36,14 @@
             android:padding="8dp"
             android:text="Synonyms"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
         <TextView
             android:id="@+id/textView_wordSynonyms"
             android:textStyle="italic"
             android:scrollHorizontally="true"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textAlignment="center"
             android:singleLine="true"
             android:ellipsize="marquee"
@@ -61,14 +61,14 @@
             android:padding="8dp"
             android:text="Antonyms for the word"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
         <TextView
             android:id="@+id/textView_wordAntonyms"
             android:textStyle="italic"
             android:scrollHorizontally="true"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textAlignment="center"
             android:ellipsize="marquee"
             android:marqueeRepeatLimit="marquee_forever"

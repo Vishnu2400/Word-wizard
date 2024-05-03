@@ -1,5 +1,6 @@
 package com.example.itmd_555_finalproject.CustomAdapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
@@ -26,6 +27,9 @@ public class wordMeaningAdapter extends RecyclerView.Adapter<wordMeaningViewHold
     private Context context;
     protected List<wordMeanings> wordMeaningsList;
 
+    private String word;
+
+
     public wordMeaningAdapter(Context context, List<wordMeanings> wordMeaningsList) {
         this.context = context;
         this.wordMeaningsList = wordMeaningsList;
@@ -38,7 +42,7 @@ public class wordMeaningAdapter extends RecyclerView.Adapter<wordMeaningViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull wordMeaningViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull wordMeaningViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.textView_wordPartsOfSpeech.setText("Parts of speech for the word " + wordMeaningsList.get(position).getPartOfSpeech());
         holder.recycler_WordDefinitions.setHasFixedSize(true);
         holder.recycler_WordDefinitions.setLayoutManager(new GridLayoutManager(context, 1));
@@ -47,12 +51,13 @@ public class wordMeaningAdapter extends RecyclerView.Adapter<wordMeaningViewHold
 
         // Check if the part of speech is an adjective
         if (wordMeaningsList.get(position).getPartOfSpeech().equalsIgnoreCase("adjective")) {
-            String word = DictionaryAPIResponse.getWord();
+
             // Fetch synonyms for adjectives
             RequestManager requestManager = new RequestManager(context);
             requestManager.fetchWordMeaning(new onFetchDataListener() {
                 @Override
                 public void onFetchData(DictionaryAPIResponse response, String message) {
+                    word = response.getWord();
                     // Retrieve synonyms and update the UI
                     if (response != null) {
                         List<wordMeanings> adjectiveMeanings = getMeaningsByPartOfSpeech(response, "adjective");

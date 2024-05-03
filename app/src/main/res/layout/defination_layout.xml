@@ -6,7 +6,7 @@
     app:cardElevation="8dp"
     app:cardCornerRadius="8dp"
     android:layout_margin="8dp"
-    app:cardBackgroundColor="@color/grey">
+    app:cardBackgroundColor="@color/blue">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
         <TextView
             android:id="@+id/textView_wordDefinition"
             android:textStyle="bold"
-            android:textColor="@color/yellow"
+            android:textColor="@color/white"
             android:text="Definition"
             android:textSize="18sp"
             android:textAlignment="center"
@@ -27,7 +27,7 @@
             android:textSize="18sp"
             android:padding="8dp"
             android:textAlignment="center"
-            android:textColor="@color/yellow"
+            android:textColor="@color/white"
             android:text="Example word"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
